@@ -29,8 +29,11 @@ def totalDanRataRata(*angka):
 
 print("=== Nomor 1 : Deret Fibonacci ===")
 n = int(input("Masukkan banyak suku: "))
-hasil = fibonacci(n)
-print(f"Deret Fibonacci {n} suku: {hasil}")
+if n <= 0:
+    print("Jumlah suku harus lebih dari 0!")
+else:
+    hasil = fibonacci(n)
+    print(f"Deret Fibonacci {n} suku: {hasil}")
 
 # nomor 2
 print("\n=== Nomor 2 : Volume Tabung ===")
