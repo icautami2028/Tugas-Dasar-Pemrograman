@@ -20,7 +20,7 @@ def volumeTabung(r, t, phi=3.14):
     volume = phi * r * r * t
     return volume
 
-def luasPermukaanTabung(r,t, phi-3.14):
+def luasPermukaanTabung(r, t, phi=3.14):
     luas = 2 * phi * r * (r + t)
     return luas
 
@@ -54,10 +54,14 @@ print("\n=== Nomor 3 : Total dan Rata-rata ===")
 teks = input("Masukkan angka (pisahkan dengan spasi): ")
 daftar = teks.split()
 angka = []
-for i in daftar:
-    angka.append(int(i))
 
-total, rataRata = totalDanRataRata(*angka)
-print(f"Input    : {angka}")
-print(f"Total    : {total}")
-print(f"Rata-rata: {rataRata}")
+for i in daftar:
+    angka.append(float(i))
+
+if len(angka) > 0:
+    total, rataRata = totalDanRataRata(*angka)
+    print(f"Input    : {angka}")
+    print(f"Total    : {total}")
+    print(f"Rata-rata: {rataRata}")
+else: 
+    print("Belum ada angka yang dimasukkan!")
