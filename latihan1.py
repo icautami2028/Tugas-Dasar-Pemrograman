@@ -20,6 +20,10 @@ def volumeTabung(r, t, phi=3.14):
     volume = phi * r * r * t
     return volume
 
+def luasPermukaanTabung(r,t, phi-3.14):
+    luas = 2 * phi * r * (r + t)
+    return luas
+
 def totalDanRataRata(*angka):
     total = 0
     for i in angka:
@@ -39,7 +43,11 @@ else:
 print("\n=== Nomor 2 : Volume Tabung ===")
 r = float(input("Masukkan jari-jari (r): "))
 t = float(input("Masukkan tinggi (t): "))
-print(f"Volume tabung = {volumeTabung(r, t)}")
+volume = volumeTabung(r, t)
+luas = luasPermukaanTabung(r, t)
+
+print(f"Volume tabung = {volume}")
+print(f"Luas permukaan tabung = {luas}")
 
 # nomor 3
 print("\n=== Nomor 3 : Total dan Rata-rata ===")
